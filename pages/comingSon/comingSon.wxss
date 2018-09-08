@@ -1,0 +1,36 @@
+/* 电影列表 */
+.section{
+  width: 100%;
+}
+.section .item{
+  width: 100%;
+  height: 800rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #ececec;
+}
+.section .item navigator{
+  width: 100%;
+  height: 800rpx;
+}
+.section .item image{
+  width: 100%;
+  height: 400rpx;
+}
+.section .item .cont{
+  width: 100%;
+  height: 400rpx;
+}
+.section .item .cont>view{
+  line-height: 80rpx;
+}
+.section .item .cont .title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.section .item .cont .showDate{
+  width: 397rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}

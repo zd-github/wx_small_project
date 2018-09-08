@@ -1,0 +1,31 @@
+<import src="/wxParse/wxParse.wxml"  />
+
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading"/><text class="loading-text">玩命加载中...</text>
+  </view>
+</block>
+<block wx:else>
+  <view class='section'>
+      <view class='item'>
+        <navigator url="/pages/movie/movie">
+          <image src="{{dataList.author.avatar_url}}"></image>
+          <view class='cont'>
+            <view class='title'>{{dataList.title}}</view>
+            <view>观看次数：{{dataList.visit_count}}</view> 
+            <view>导演：{{dataList.author.loginname}}</view> 
+            <view class='showDate'>上映时间：{{dataList.create_at}}</view> 
+          </view>
+        </navigator>
+      </view>
+  </view>
+
+  <view class='content'>
+    <view class='jie'>剧情简介：</view>
+    <view>
+      <template is="wxParse" data="{{wxParseData:movie.nodes}}" />
+    </view>
+  </view>
+  </block>
+
+  

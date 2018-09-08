@@ -1,0 +1,45 @@
+/* 在使用的Wxss中引入WxParse.css,可以在app.wxss */
+@import "/wxParse/wxParse.wxss";
+
+.section{
+  width: 100%;
+  margin: 20rpx auto;
+}
+.section .item{
+  width: 100%;
+  height: 400rpx;
+}
+.section .item navigator{
+  width: 100%;
+  height: 400rpx;
+   display: flex;
+}
+.section .item image{
+  width: 250rpx;
+  height: 400rpx;
+  flex: 1;
+}
+.section .item .cont{
+  width: 500rpx;
+  flex: 2;
+}
+.section .item .cont>view{
+  line-height: 80rpx;
+}
+.section .item .cont .title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section .item .cont .showDate{
+  width: 397rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.content .jie{
+  font-size: 45rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ececec;
+  margin-bottom: 20rpx;
+}

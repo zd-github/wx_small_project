@@ -1,0 +1,25 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading"/><text class="loading-text">玩命加载中...</text>
+  </view>
+</block>
+<block wx:else>
+<!--电影列表-->
+<view class='section'>
+  <scroll-view wx:for="{{dataList}}" wx:key="datalist" scroll-y="true">
+    <view class='item'>
+      <navigator url="/pages/movie/movie?id={{item.id}}&title={{item.title}}">
+        <image src="{{item.author.avatar_url}}"></image>
+        <view class='cont'>
+          <view class='title'>{{item.title}}</view>
+          <view>观看次数：{{item.visit_count}}</view> 
+          <view>导演：{{item.author.loginname}}</view> 
+          <view class='showDate'>上映时间：{{item.create_at}}</view> 
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+
+</block>
+

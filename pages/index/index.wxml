@@ -1,0 +1,35 @@
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading"/><text class="loading-text">玩命加载中...</text>
+  </view>
+</block>
+<block wx:else>
+<!--轮播图-->
+  <view class='lunbo'>
+    <swiper indicator-color="#fff" indicator-active-color="#333" indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="swiper">
+        <swiper-item>
+          <image src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+<!--电影列表-->
+<view class='section'>
+  <scroll-view wx:for="{{dataList}}" wx:key="datalist" scroll-y="true">
+    <view class='item'>
+      <navigator url="/pages/movie/movie?id={{item.id}}&title={{item.title}}">
+        <image src="{{item.author.avatar_url}}"></image>
+        <view class='cont'>
+          <view class='title'>{{item.title}}</view>
+          <view>观看次数：{{item.visit_count}}</view> 
+          <view>导演：{{item.author.loginname}}</view> 
+          <view class='showDate'>上映时间：{{item.create_at}}</view> 
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+
+</block>
+
